@@ -27,7 +27,7 @@ class JoypadState extends State<Joypad> {
     updateDelta(
       Offset.fromDirection(
         newDelta.direction,
-        min(37.5, newDelta.distance),
+        min(45, newDelta.distance),
       ),
     );
   }
@@ -43,19 +43,19 @@ class JoypadState extends State<Joypad> {
         child: GestureDetector(
           child: Container(
             decoration: BoxDecoration(
-              color: Color(0x88ffffff),
+              color: Color(0x55ffffff),
               borderRadius: BorderRadius.circular(75),
             ),
             child: Center(
               child: Transform.translate(
                 offset: delta,
                 child: SizedBox(
-                  height: 75,
-                  width: 75,
+                  height: 60,
+                  width: 60,
                   child: Container(
                     decoration: BoxDecoration(
                       color: Color(0xccffffff),
-                      borderRadius: BorderRadius.circular(37.5),
+                      borderRadius: BorderRadius.circular(30),
                     ),
                   ),
                 ),
